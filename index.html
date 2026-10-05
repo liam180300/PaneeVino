@@ -1028,99 +1028,106 @@ const RESTAURANT_DATA = {
   instagram: "[INSTAGRAM LINK]",
   facebook: "[FACEBOOK LINK]",
 
-  // Platzhalter-Speisekarte – Gerichte & Preise bitte vor Livegang ersetzen.
+  // Speisekarte nach der gedruckten Karte (Kategorie > Gericht > Beschreibung > Preis)
   menu: [
     {
       category: "Suppen",
       items: [
-        { name: "Minestrone", desc: "Gemüsesuppe", price: "Preis" },
-        { name: "Crema di Pomodoro", desc: "Cremige Tomatensuppe mit Basilikum", price: "Preis" },
-        { name: "Zuppa di Pesce", desc: "Fischsuppe", price: "Preis" }
+        { name: "Gemüsesuppe", desc: "", price: "7€" },
+        { name: "Tomatensuppe", desc: "mit Basilikum", price: "7€" },
+        { name: "Fischsuppe", desc: "", price: "11€" }
       ]
     },
     {
       category: "Salate",
       items: [
-        { name: "Insalata Mista", desc: "Gemischter Salat mit Karotten, Tomaten, Gurken und Essig Dressing", price: "9€" },
-        { name: "Insalata Caprese", desc: "Tomaten, Mozzarella, Basilikum und Olivenöl", price: "11€" },
-        { name: "Insalata di Pomodoro", desc: "Frische Tomaten mit zwiebeln, Parmesan und Olivenöl", price: "10€" },
-        { name: "Insalata Italia", desc: "Salat mit Schinken, Butterkäse und Eier", price: "11€" },
-        { name: "Insalata di Polio", desc: "Mit Hächenbrust", price: "11€" },
-        { name: "Insalata Nizza", desc: "Thunfisch, Sardellen und Eier", price: "13€" },
-        { name: "Insalata Gamberi", desc: "Garnelen, Tomaten und Knoblauch", price: "13€" }
+        { name: "Salat Mista", desc: "Tomaten, Karotten, Gurken und Balsamico-Dressing", price: "9€" },
+        { name: "Salat Caprese", desc: "Tomaten, Mozzarella, Basilikum, Oliven und Olivenöl", price: "11€" },
+        { name: "Italia Salat", desc: "Schinken, Butterkäse und Ei", price: "11€" },
+        { name: "Hähnchensalat", desc: "Mit Hähnchenbrustfilet, Champignon", price: "11€" },
+        { name: "Salat Nizza", desc: "Mit Thunfisch, Sardellen und Ei", price: "11€" },
+        { name: "Salat Gamberi", desc: "Mit Garnelen, Tomaten und frischem Knoblauch", price: "13€" }
       ]
     },
     {
       category: "Antipasti",
       items: [
-        { name: "Bruschetta", desc: "Tomaten Salat auf Brot mit Olivenöl", price: "Preis" },
-        { name: "Carpaccio di Manzo", desc: "Salami piccante, Chili, Mozzarella", price: "Preis" }
+        { name: "Bruschetta", desc: "Geröstetes Brot mit fr. Tomaten, Basilikum, Knoblauch und Olivenöl", price: "9€" },
+        { name: "Carpaccio di Manzo", desc: "Rinderfilet mit Rucola, Parmesan und Zitronendressing", price: "13€" },
+        { name: "Pommes", desc: "", price: "6€" },
+        { name: "Chicken Nuggets mit Pommes", desc: "", price: "11€" }
+      ]
+    },
+    {
+      category: "Risotto",
+      items: [
+        { name: "Risotto Primavera", desc: "Reis mit frischem Gemüse in cremiger Tomatensauce", price: "11€" },
+        { name: "Risotto di Mare", desc: "Reis mit Meeresfrüchten", price: "13€" },
+        { name: "Risotto al Limone con Scampi", desc: "Reis mit Garnelen und Limette", price: "13€" }
       ]
     },
     {
       category: "Pasta",
+      note: "Zu jedem Pastagericht erhalten Sie ein Softgetränk gratis dazu.",
       items: [
-        { name: "Penne all'Arrabbiata", desc: "Pikante Tomatensoße mit Knoblauch und Chilli", price: "10€" },
-        { name: "Penne al Pesto", desc: "Mit Basilikum Pesto, Pinienkerne und Parmesan", price: "11€" },
-        { name: "Spaghetti Aglio e olio", desc: "Mit Knoblauch", price: "11€" },
-        { name: "Bolognese", desc: "Mit Rinderhackfleischsauce", price: "Preis" },
-        { name: "Spaghetti Napoli", desc: "Mit Tomatensauce", price: "Preis" },
-        { name: "Spaghetti Alla Carbonara", desc: "Mit Eigelb, Sahne und Speck", price: "Preis" },
-        { name: "Spaghetti ai Gamberetti", desc: "Garnelen, Knoblauch, Chilli und Weißweinsauce", price: "Preis" },
-        { name: "Spaghetti ai Frutti di Mare", desc: "Mit Meeresfrüchten in Tomatensauce", price: "Preis" },
-        { name: "Tagiatelle al Tarufo", desc: "Mit Trüffelsauce und Parmesan", price: "Preis" },
-        { name: "Tagiatelle al Salmone", desc: "Mit Lachs und Tomaten-Sahne-Sauce", price: "Preis" },
-        { name: "Tortellini", desc: "Mit Schinken, Champignons, Sahnesauce und Parmesan", price: "Preis" },
-        { name: "Gnocchi Aurora", desc: "Kartoffelgnocchi mit Rinderhackfleisch in Cremige Tomaten-Sahne-Sauce", price: "Preis" },
-        { name: "Gnocchi al Gorgonzola", desc: "Kartoffelgnocchi in Gorgonzolasauce ", price: "Preis" },
-        { name: "Lasagne Bilognese", desc: "Mit Rinderhackfleisch", price: "Preis" },
-        { name: "Risotto Di Mare", desc: "Mit Meeresfrüchten", price: "Preis" },
-        { name: "Risotto Primavera", desc: "Frisches Gemüse in Cremigen Risotto", price: "Preis" }
+        { name: "Penne all'Arrabbiata", desc: "Mit Kirschtomaten Sauce, Chili und Basilikum", price: "10€" },
+        { name: "Penne all'Amatriciana", desc: "Mit Speck und Zwiebeln in Tomatensauce", price: "11€" },
+        { name: "Spaghetti Napoli", desc: "Mit Tomatensauce", price: "9€" },
+        { name: "Aglio e Olio e Peperoncino", desc: "Mit Olivenöl, Knoblauch und Chili", price: "11€" },
+        { name: "Spaghetti Bolognese", desc: "Mit Hackfleischsauce aus Rindfleisch", price: "11€" },
+        { name: "Spaghetti Carbonara", desc: "Mit Speck, Eigelb und Sahne", price: "11€" },
+        { name: "Spaghetti alla Norma", desc: "Mit Auberginen, Parmesan und Knoblauch in Tomatensauce", price: "11€" },
+        { name: "Spaghetti con Garnelen", desc: "Mit Garnelen, Kirschtomaten, Weißweinsauce und Knoblauch", price: "13€" },
+        { name: "Spaghetti ai Frutti di Mare", desc: "Mit Meeresfrüchten und Knoblauch in Tomatensauce", price: "13€" },
+        { name: "Tagliatelle al Tartufo", desc: "Bandnudeln mit Trüffelsauce und Parmesan", price: "13€" },
+        { name: "Tagliatelle al Salmone", desc: "Bandnudeln mit Lachsstücken in einer cremigen Rosé-Tomatensauce", price: "13€" },
+        { name: "Tagliatelle Franki", desc: "Bandnudeln mit Rinderstreifen, Paprika, Zwiebeln, Sellerie in Tomatensauce", price: "13€" },
+        { name: "Gnocchi Aurora", desc: "Mit Rinderstreifen in cremiger Tomaten-Sahne-Sauce, Parmesan", price: "13€" },
+        { name: "Gnocchi al Gorgonzola", desc: "Mit Spinat in Gorgonzolasauce", price: "11€" },
+        { name: "Ravioli Ricotta", desc: "Gefüllt mit Ricotta und Spinat in Butter-Salbei-Sauce", price: "11€" },
+        { name: "Veggie-Rigatoni", desc: "Mit Sahnesauce, Champignons, verschiedene Gemüse", price: "11€" }
       ]
     },
     {
       category: "Pizza",
-     items: [
-        { name: "Margherita", desc: "Mit Tomatensoße und Käse", price: "Preis" },
-        { name: "Salami", desc: "Mit Rindersalami", price: "Preis" },
-        { name: "Diavolo", desc: "Mit Salami und Peperoni", price: "Preis" },
-        { name: "Prosciotto e Funghi", desc: "Mit Schinken und Champignons", price: "Preis" },
-        { name: "Quattro Formaggi", desc: "Vier Käsesorten", price: "Preis" },
-        { name: "Pollo", desc: "Mit Hünchenbrust und Champignons", price: "Preis" },
-        { name: "Parma", desc: "Mit Parmaschinken, Rucola, Parmesan und Kirschtomaten", price: "Preis" },
-        { name: "Hawaii", desc: "Mit Schinken und Ananas", price: "Preis" },
-        { name: "Burrata", desc: "Mit Burrata, Kirschtomaten und Rucola", price: "Preis" },
-        { name: "Della Casa", desc: "Mit Schinken, Salami, Champignons, Knoblauch und Oliven", price: "Preis" },
-        { name: "Vegetariana", desc: "Mit Paprika, Zuchhini, Aubergine, Champignons und Zwiebeln", price: "Preis" },
-        { name: "Tonno", desc: "Mit Thunfisch und Zwiebeln", price: "Preis" },
-        { name: "Frutti di Mare", desc: "Mit Meeresfrüchten, Knoblauch", price: "Preis" },
-        { name: "Gamberetti", desc: "Mit Garnelen, Knoblauch und Tomaten", price: "Preis" },
-        { name: "Calzone", desc: "Mit Schinken, Salami und Champignons", price: "Preis" }
+      note: "Zu jedem Pizzagericht erhalten Sie gleichfalls ein Softgetränk gratis dazu.",
+      items: [
+        { name: "Margherita", desc: "Tomatensauce und Mozzarella", price: "9€" },
+        { name: "Capri", desc: "Sardellen, Mozzarella, Zwiebeln, Knoblauch, Kapern", price: "11€" },
+        { name: "Salami o Prosciutto", desc: "Mozzarella und Salami oder Schinken", price: "11€" },
+        { name: "Pane e Vino", desc: "Schinken, Mozzarella, Salami, Oliven und Champignons", price: "11€" },
+        { name: "Tonno e Cipolla", desc: "Thunfisch, Mozzarella und Zwiebeln", price: "11€" },
+        { name: "Vegetaria", desc: "Mozzarella und verschiedene Gemüse", price: "11€" },
+        { name: "Diavolo", desc: "Rinder-Peperoniwurst, Mozzarella, Peperoni, Zwiebeln, Knoblauch, Chili", price: "11€" },
+        { name: "Gorgonzola", desc: "Mozzarella, Gorgonzola, Spinat und Knoblauch", price: "11€" },
+        { name: "Capricciosa", desc: "Schinken, Mozzarella, Oliven, Ei und Artischocken", price: "11€" },
+        { name: "Quattro Stagioni", desc: "Salami, Mozzarella, Champignons, Schinken und Artischocken", price: "11€" },
+        { name: "Quattro Formaggi", desc: "Mozzarella, Gorgonzola, Feta und Parmesan", price: "11€" },
+        { name: "Prosciutto e Funghi", desc: "Schinken, Mozzarella und Champignons", price: "11€" },
+        { name: "Pollo", desc: "Hähnchenbrust, Champignons, Oliven und Zwiebeln", price: "11€" },
+        { name: "Frutti di Mare", desc: "Meeresfrüchte, Mozzarella und Knoblauch", price: "13€" },
+        { name: "Salmone", desc: "Lachs, Mozzarella, Knoblauch und Spinat", price: "13€" },
+        { name: "Pizza Brot", desc: "Mit Knoblauch", price: "5€" }
       ]
     },
     {
-      category: "Fisch",
-     items: [
-        { name: "Filet vom Lachs", desc: "Zartes Lachsfilet, dazu Gemüse und Kartoffeln", price: "Preis" },
-        { name: "Doradenfilet", desc: "Mit Gemüse und Kartoffeln", price: "Preis" }
-      ]
-    },
-    {
-      category: "Fleisch",
-     items: [
-        { name: "Gegrillte Lamkoteletts", desc: "Gegrilltes Lammkoteletts mit frischem Gemüse", price: "Preis" },
-        { name: "Gegrilltes Rinderfilet mit Barolo-Sauce", desc: "Zartes Rinderfilet, gegrillt, mit feiner Barolo-Sauce, feigen, Gemüse und Kartoffeln", price: "Preis" }
+      category: "Al Forno",
+      items: [
+        { name: "Lasagne", desc: "Überbacken mit Hackfleischsauce und Mozzarella", price: "11€" },
+        { name: "Cannelloni Ricotta", desc: "Gefüllt mit Ricotta und Spinat", price: "11€" },
+        { name: "Lasagne mit Gemüse", desc: "", price: "11€" },
+        { name: "Combinazione", desc: "Lasagne, Penne und Cannelloni", price: "13€" },
+        { name: "Rigatoni al Forno", desc: "Hähnchen, Champignons, Sahnesauce und Mozzarella", price: "11€" },
+        { name: "Tortellini al Forno", desc: "Schinken, Champignons und Tomaten-Sahne-Sauce", price: "11€" }
       ]
     },
     {
       category: "Desserts",
-     items: [
-        { name: "Tiramisu", desc: " ", price: "Preis" },
-        { name: "Tartufo Nero", desc: "Mit Schokoladeneis", price: "Preis" },
-        { name: "Panna Cotta", desc: " " ,price: "Preis" },
-        { name: "Frutta Fresco", desc: "Frischer Obstteller", price: "Preis" },
-        { name: "Vanilleeis", desc: " ", price: "Preis" },
-        { name: "Schokoladeneis", desc: " ", price: "Preis" }
+      items: [
+        { name: "Tiramisu", desc: "", price: "8€" },
+        { name: "Panna Cotta", desc: "", price: "8€" },
+        { name: "Tartufo Nero", desc: "Mit Schokoladeneis", price: "8€" },
+        { name: "Vanille oder Schokoladeneis", desc: "", price: "2€" }
       ]
     }
   ],
@@ -1175,6 +1182,12 @@ const RESTAURANT_DATA = {
         </div>`;
     });
     panel.appendChild(list);
+    if (cat.note) {
+      const note = document.createElement('p');
+      note.className = 'menu-note';
+      note.textContent = cat.note;
+      panel.appendChild(note);
+    }
     panelsEl.appendChild(panel);
   });
 
